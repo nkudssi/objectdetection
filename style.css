@@ -1,0 +1,22 @@
+body{
+    background: linear-gradient(to bottom right , plum,blueviolet, darkblue 100%);
+}
+.heading
+{
+font-size: 23px;
+width: 100%;
+margin: 0px;
+}
+
+#status
+{
+font-size: 18px;
+}
+
+.btn-default{
+    display: block;
+    margin: 50px;
+    border-radius: 15px;
+    padding: 20px;
+}
+
