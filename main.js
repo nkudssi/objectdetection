@@ -1,5 +1,7 @@
 img = [];
 index = 0;
+Status = "";
+object = [];
 
 function preload() {
     img[0] = loadImage("bedroom.jpg");
@@ -26,12 +28,22 @@ function gotResult(error, result) {
     } else {
         console.log(result);
         object = result;
+        Status=true;
 
     }
 }
 
 function draw() {
     image(img[index],0,0,650,450)
+    if (Status) {
+        for(i = 0; i < object.length; i++){
+            fill("black");
+            text(object[i].label, object[i].x+10, object[i].y+10)
+            noFill();
+            stroke("black");
+            rect(object[i].x, object[i].y, object[i].width, object[i].height)
+        }
+    }
 }
 
 function back() {
